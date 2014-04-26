@@ -1,0 +1,16 @@
+@import url("normalize.min.css");
+@import url("global.css");
+@import url("icomoon.css");
+@font-face {
+  font-family: "Moonflower";
+  src: url("fonts/Moon-Flower.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Moonflower-bold";
+  src: url("fonts/Moon-Flower-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
