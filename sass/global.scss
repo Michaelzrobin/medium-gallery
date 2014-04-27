@@ -31,14 +31,16 @@ header{
     padding-top: 10px;
   }
 }
-section.navbar{
-  background-color: #EFEFEF;
-  height: 5em;
-}
-nav{
+.navbar-wrapper{
+  margin-top: 30px;
+  background-color: white;
+
   width: 100%;
   height: 80px;
+  nav{
+  height: 100%;
   margin: 0 auto;
+  }
   a{
     font-family: "Moonflower-bold";
     display: inline-block;
@@ -46,6 +48,7 @@ nav{
     font-size: 2em;
     padding-top: .75em;
     width: 15%;
+    height: 100%;
     margin-left: 5%;
     margin-right: 5%;
     font-weight: 800;
@@ -53,7 +56,7 @@ nav{
     transition-property: border-bottom;
     border-bottom: 1px solid transparent;
     &:hover{
-      border-bottom: 1.5px solid #5B5B5B;
+      border-bottom: 2px solid #5B5B5B;
     }
   }
 }
@@ -62,13 +65,21 @@ nav{
   width: 100px;
   margin: 0 auto;
 }
-.carousel{
-  height: 360px;
+
+.slideshow{
   width: 100%;
+  background-color: white;  }
+.slides{
+  li:first-child{
+    img{
+    margin-left: 100px;
+    }
+  }
 }
 .social{
+  clear: both;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0 auto 30px auto;
   a{
     padding-top: 1em;
@@ -88,3 +99,4 @@ section.about{
   width: 60%;
 }
 // HELPER CLASSES
+
