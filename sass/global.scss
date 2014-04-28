@@ -35,7 +35,7 @@ header{
   }
 }
 .navbar-wrapper{
-  margin-top: 10px;
+  margin-top: 20px;
   background-color: white;
 
   width: 100%;
@@ -120,7 +120,6 @@ section.about{
   #wrapper {
         background-color: #fff;
         width: 100%;
-        height: 450px;
         margin-top: -225px;
         overflow: hidden;
         position: absolute;
@@ -129,12 +128,12 @@ section.about{
       }
       #carousel img {
         display: block;
+        height: 450px;
         float: left;
       }
       #prev, #next {
         background-color: #FAF4EB;
-        background-color: rgba(250,244,235,0.5);
-        opacity: .7;
+        background-color: rgba(10,5,0,0.7);
         display: block;
         height: 450px;
         width: 50%;
@@ -144,7 +143,7 @@ section.about{
         transition-property: background-color;
       }
       #prev:hover, #next:hover {
-        background-color: rgba(250,244,235,0.1);        opacity: 1;
+        background-color: rgba(10,5,0,0.4);        opacity: 1;
       }
       #prev {
         left: -495px;
