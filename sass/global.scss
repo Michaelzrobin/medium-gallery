@@ -5,13 +5,16 @@
 html{
   font-size: 16px;
 }
+html, body{
+  height: 100%;
+}
 a{
   text-decoration: none;
   color:black;
 }
 // UTILITY CLASSES
 .container{
-  width: 860px;
+  width: 990px;
   margin: 0 auto;
 }
 // CUSTOM STYLES
@@ -32,7 +35,7 @@ header{
   }
 }
 .navbar-wrapper{
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: white;
 
   width: 100%;
@@ -73,7 +76,7 @@ header{
   transform: translateY(-10px);
 }
 &:hover::after{
-  height: 6px;
+  height: 3px;
   opacity: 1;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
@@ -87,16 +90,6 @@ header{
   margin: 0 auto;
 }
 
-.slideshow{
-  width: 100%;
-  background-color: white;  }
-.slides{
-  li:first-child{
-    img{
-    margin-left: 100px;
-    }
-  }
-}
 .social{
   clear: both;
   width: 100%;
@@ -120,4 +113,43 @@ section.about{
   width: 60%;
 }
 // HELPER CLASSES
-
+.slider{
+  margin-top: 225px;
+  position: relative;
+}
+  #wrapper {
+        background-color: #fff;
+        width: 100%;
+        height: 450px;
+        margin-top: -225px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+      #carousel img {
+        display: block;
+        float: left;
+      }
+      #prev, #next {
+        background-color: #FAF4EB;
+        background-color: rgba(250,244,235,0.5);
+        opacity: .7;
+        display: block;
+        height: 450px;
+        width: 50%;
+        top: 0;
+        position: absolute;
+        transition: 400ms ease-in-out;
+        transition-property: background-color;
+      }
+      #prev:hover, #next:hover {
+        background-color: rgba(250,244,235,0.1);        opacity: 1;
+      }
+      #prev {
+        left: -495px;
+      }
+      #next {
+        right: -495px;
+      }
+     
