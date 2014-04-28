@@ -43,6 +43,7 @@ header{
   }
   a{
     font-family: "Moonflower-bold";
+    position:relative;
     display: inline-block;
     text-align: center;
     font-size: 2em;
@@ -55,9 +56,29 @@ header{
     transition: 600ms;
     transition-property: border-bottom;
     border-bottom: 1px solid transparent;
-    &:hover{
-      border-bottom: 2px solid #5B5B5B;
-    }
+    &::after {
+  position: absolute;
+  top: 95%;
+  left: 0;
+  width: 100%;
+  height: .5px;
+  background: #000;
+  content: '';
+  opacity: 0;
+  -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+&:hover::after{
+  height: 6px;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
   }
 }
 .logo{
