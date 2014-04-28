@@ -5,12 +5,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Untitled</title>
-        <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+        
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 
         <link rel="author" href="humans.txt">
 
+ 
     </head>
     <body>
         <header>
@@ -29,29 +31,20 @@
              --><a href="">FRIENDS</a><!-- 
        --></nav>
         </div>
-
-      <!-- <div class="container"> -->
-
-      <section class="slideshow">
-        <!-- <div class="container"> -->
-          <div class="flexslider">
-            <ul class="slides">
-              <li>
-                <img src="img/cover-photo.jpg" />
-              </li>
-              <li>
-                <img class="nav-next" src="http://24.media.tumblr.com/e73feedae776d0b954af0f0a713f1c82/tumblr_n4eov0OiP61qc68uuo3_400.jpg" />
-              </li>
-              <li>
-                <img src="http://24.media.tumblr.com/7ffaa694335729197f737f89f0a4574d/tumblr_n15jgxv3hO1qc68uuo2_1280.jpg" />
-              </li>
-              <li>
-                <img src="http://37.media.tumblr.com/4dfa3fc33f58cc6e602529b476cce6a3/tumblr_mqt4zdfrY41qen8hxo1_1280.jpg" />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+<section class="slider">
+<div id="wrapper">
+      <div id="carousel">
+        <img src="img/cover-photo.jpg" alt="building1" width="990" height="450" />
+        <img src="img/cover-photo.jpg" alt="building2" width="990" height="450" />
+        <img src="img/cover-photo.jpg" alt="building3" width="990" height="450" />
+        <img src="img/cover-photo.jpg" alt="building4" width="990" height="450" />
+        <img src="img/cover-photo.jpg" alt="building5" width="990" height="450" />
+        <img src="img/cover-photo.jpg" alt="building6" width="990" height="450" />
+      </div>
+      <a href="#" id="prev" title="Show previous"> </a>
+      <a href="#" id="next" title="Show next"> </a>
+    </div>
+  </section>
 
         <section class="social">
           <div class="container">
@@ -82,17 +75,31 @@
 
 
 <!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
- <script defer src="js/jquery.flexslider.js"></script>
 
-<script>
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide"
-  });
-});
-</script>
+   <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('#carousel').carouFredSel({
+          width: '100%',
+          items: {
+            visible: 3,
+            start: -1
+          },
+          scroll: {
+            items: 1,
+            duration: 1000,
+            timeoutDuration: 3000
+          },
+          prev: '#prev',
+          next: '#next',
+          pagination: {
+            container: '#pager',
+            deviation: 1
+          }
+        });
+      });
+    </script>
 
     </body>
 </html>

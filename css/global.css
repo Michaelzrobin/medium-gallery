@@ -6,13 +6,17 @@ html {
   font-size: 16px;
 }
 
+html, body {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
 
 .container {
-  width: 860px;
+  width: 990px;
   margin: 0 auto;
 }
 
@@ -34,7 +38,7 @@ header h1 {
 }
 
 .navbar-wrapper {
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: white;
   width: 100%;
   height: 80px;
@@ -45,6 +49,7 @@ header h1 {
 }
 .navbar-wrapper a {
   font-family: "Moonflower-bold";
+  position: relative;
   display: inline-block;
   text-align: center;
   font-size: 2em;
@@ -58,23 +63,34 @@ header h1 {
   transition-property: border-bottom;
   border-bottom: 1px solid transparent;
 }
-.navbar-wrapper a:hover {
-  border-bottom: 2px solid #5B5B5B;
+.navbar-wrapper a::after {
+  position: absolute;
+  top: 95%;
+  left: 0;
+  width: 100%;
+  height: .5px;
+  background: #000;
+  content: '';
+  opacity: 0;
+  -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+.navbar-wrapper a:hover::after {
+  height: 3px;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 .logo {
   display: block;
   width: 100px;
   margin: 0 auto;
-}
-
-.slideshow {
-  width: 100%;
-  background-color: white;
-}
-
-.slides li:first-child img {
-  margin-left: 100px;
 }
 
 .social {
@@ -97,4 +113,51 @@ header h1 {
   display: block;
   margin: 0 auto;
   width: 60%;
+}
+
+.slider {
+  margin-top: 225px;
+  position: relative;
+}
+
+#wrapper {
+  background-color: #fff;
+  width: 100%;
+  height: 450px;
+  margin-top: -225px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+#carousel img {
+  display: block;
+  float: left;
+}
+
+#prev, #next {
+  background-color: #FAF4EB;
+  background-color: rgba(250, 244, 235, 0.5);
+  opacity: .7;
+  display: block;
+  height: 450px;
+  width: 50%;
+  top: 0;
+  position: absolute;
+  transition: 400ms ease-in-out;
+  transition-property: background-color;
+}
+
+#prev:hover, #next:hover {
+  background-color: rgba(250, 244, 235, 0.1);
+  opacity: 1;
+}
+
+#prev {
+  left: -495px;
+}
+
+#next {
+  right: -495px;
 }
