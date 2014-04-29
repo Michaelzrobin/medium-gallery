@@ -120,12 +120,12 @@ header h1 {
   width: 200px;
   height: 100px;
   margin: 0% auto;
-  font-family: "moonflower-bold";
   font-size: 2em;
+  font-family: "moonflower";
   margin-top: 180px;
   visibility: none;
   color: black;
-  display: none;
+  opacity: 0;
   text-align: center;
   background-color: white;
   border: 5px solid black;

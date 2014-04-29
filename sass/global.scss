@@ -115,17 +115,25 @@ header{
   height: 468px;
   overflow: hidden;
   background-size: cover;
+  &:hover .slide-title{
+    // opacity: 1;
+  }
 }
 .slide-title{
+  // -webkit-transition: opacity 800ms ease-in;
+  //    -moz-transition: opacity 800ms ease-in;
+  //     -ms-transition: opacity 800ms ease-in;
+  //      -o-transition: opacity 800ms ease-in;
+  //         transition: opacity 800ms ease-in;
   width: 200px;
   height: 100px;
   margin: 0% auto;
-  font-family: "moonflower-bold";
   font-size: 2em;
+  font-family: "moonflower";
   margin-top: 180px;
   visibility: none;
   color: rgba(0,0,0,1);
-  display: none;
+  opacity: 0;
   text-align: center;
   background-color: white;
   border: 5px solid black;
