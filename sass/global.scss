@@ -14,7 +14,7 @@ a{
 }
 // UTILITY CLASSES
 .container{
-  width: 990px;
+  width: 1000px;
   margin: 0 auto;
 }
 // CUSTOM STYLES
@@ -22,7 +22,7 @@ header{
   width: 100%;
   margin: 0 auto;
   font-size: 1.1rem;
-  padding-top: 25px;
+  padding-top: 50px;
   height: 175px;
   background-color: white;
   h1{
@@ -35,7 +35,7 @@ header{
   }
 }
 .navbar-wrapper{
-  margin-top: 20px;
+  margin-top: 45px;
   background-color: white;
 
   width: 100%;
@@ -105,50 +105,119 @@ header{
     }
   }
 }
+
+// CAROUSEL
+
+
+
+.slide{
+  width: 1000px;
+  height: 450px;
+  overflow: hidden;
+  background-size: cover;
+}
+.slide-title{
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  margin: 0% auto;
+  font-family: "moonflower-bold";
+  font-size: 2em;
+  margin-top: 200px;
+  color: rgba(0,0,0,1);
+  text-align: center;
+  background-color: white;
+  border: 5px solid black;
+  position: relative;
+  h2{
+    position: relative;
+    left: 0px;
+    bottom: 20px;
+  }
+}
+
+.slider{
+  height: 450px;
+  padding-top: 225px;
+  position: relative;
+
+}
+#wrapper {
+  background-color: #fff;
+  width: 100%;
+  margin-top: -225px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+#carousel .slide {
+  display: block;
+  height: 450px;
+  float: left;
+
+}
+#prev, #next {
+  background-color: #FAF4EB;
+  background-color: rgba(255,255,255,.7);
+  display: block;
+  height: 450px;
+  width: 50%;
+  top: 0;
+  position: absolute;
+  transition: 400ms ease-in-out;
+  transition-property: background-color;
+}
+#prev:hover, #next:hover {
+  background-color: rgba(255,255,255,.4);        opacity: 1;
+}
+#prev {
+  left: -500px;
+}
+#next {
+  right: -500px;
+}
+
+// INSERT IMAGES HERE
+
+.slide1{
+  background-image: url('../img/cover-photo.jpg');
+}
+.slide2{
+  background-image: url('../img/spit.jpg');
+}
+.slide3{
+  background-image: url('../img/scientist.jpg');
+}
+.slide4{
+  background-image: url('../img/stairs.jpg');
+}
+
+
+// ABOUT
+
 section.about{
+  background-color: white;
+  width: 50%;
+  padding: 25px 0 ;
+  border: 5px solid black;
+  margin: 125px auto 125px auto;
+  h1{
+    width: 75px;
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+    text-align: center;
+    font-family: moonflower-bold;
+  }
+}
+.about-container{
+  padding: 10px 0 ;
+  height:100%;
+  background-color: #ECECEC;
 }
 .about-text{
+  font-family: 'PT Sans Narrow', 'sans-serif';
   display: block;
   margin: 0 auto;
-  width: 60%;
+  width: 50%;
 }
-// HELPER CLASSES
-.slider{
-  margin-top: 225px;
-  position: relative;
-}
-  #wrapper {
-        background-color: #fff;
-        width: 100%;
-        margin-top: -225px;
-        overflow: hidden;
-        position: absolute;
-        top: 50%;
-        left: 0;
-      }
-      #carousel img {
-        display: block;
-        height: 450px;
-        float: left;
-      }
-      #prev, #next {
-        background-color: #FAF4EB;
-        background-color: rgba(10,5,0,0.7);
-        display: block;
-        height: 450px;
-        width: 50%;
-        top: 0;
-        position: absolute;
-        transition: 400ms ease-in-out;
-        transition-property: background-color;
-      }
-      #prev:hover, #next:hover {
-        background-color: rgba(10,5,0,0.4);        opacity: 1;
-      }
-      #prev {
-        left: -495px;
-      }
-      #next {
-        right: -495px;
-      }
-     

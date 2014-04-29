@@ -19,7 +19,7 @@
           <div class="header-wrapper">
             <img class="logo" src="img/mg-logo.png">
             <h1>
-              Medium Gallery is Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Medium Gallery: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </h1>
           </div>
         </header>
@@ -31,21 +31,44 @@
              --><a href="">FRIENDS</a><!-- 
        --></nav>
         </div>
+        <!-- CAROUSEL -->
 <section class="slider">
-<div id="wrapper">
-      <div id="carousel">
-        <img src="img/cover-photo.jpg" alt="building1" width="990" height="450" />
-        <img src="http://24.media.tumblr.com/7ffaa694335729197f737f89f0a4574d/tumblr_n15jgxv3hO1qc68uuo2_1280.jpg" alt="building2" width="990" height="450" />
-        <img src="http://37.media.tumblr.com/b0fd65570c900c8aecf4bf414dd608fb/tumblr_n15jgxv3hO1qc68uuo4_1280.jpg" alt="building3" width="990" height="450" />
-        <img src="http://37.media.tumblr.com/255074433a59122efb2537c65a3e033e/tumblr_mwhedbQlcT1qc68uuo2_1280.jpg" alt="building4" width="990" height="450" />
-        <img src="img/cover-photo.jpg" alt="building5" width="990" height="450" />
-        <img src="img/cover-photo.jpg" alt="building6" width="990" height="450" />
-      </div>
-      <a href="#" id="prev" title="Show previous"> </a>
-      <a href="#" id="next" title="Show next"> </a>
-    </div>
-  </section>
-
+  <div id="wrapper">
+        <div id="carousel">
+          <div class="slide slide1">
+            <div class="slide-title">
+              <h2>  <a href="#"> The Lemons </a></h2>
+            </div>
+          </div>
+          <div class="slide slide2">
+            <div class="slide-title"> 
+              <h2> <a href="#"> The Apples </a></h2>
+            </div>
+          </div>
+          <div class="slide slide3">
+            <div class="slide-title"> 
+              <h2> <a href="#"> The Oranges</a> </h2>
+            </div>        
+          </div>
+          <div class="slide slide4">
+            <div class="slide-title"> 
+              <h2> <a href="#"> The Grapes </a></h2>
+            </div>
+          </div>
+        </div>
+  </div>
+  <a href="#" id="prev" title="Show previous"> </a>
+  <a href="#" id="next" title="Show next"> </a>
+</section>
+   <!-- END CAROUSEL/LIFE -->
+   <div class="about-container">
+      <section class="about">
+        <h1> About </h1>
+        <div class="about-text">
+        <p> Medium Gallery  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, similique repellendus excepturi quo quas. A, explicabo, laboriosam, dignissimos, quidem minima architecto velit nemo illo sapiente iusto est maxime accusantium doloremque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, sed ex adipisci reiciendis nobis iure tempora ullam soluta quibusdam dignissimos odio maxime ab atque aut labore et consectetur aliquam ad. </p>
+        </div>
+      </section>
+</div>
         <section class="social">
           <div class="container">
             <a href=""><!-- 
@@ -74,7 +97,7 @@
         </footer>
 
 
-<!-- jQuery -->
+<!-- CAROUSEL  -->
 
    <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
     <script src="js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
@@ -89,13 +112,17 @@
           scroll: {
             items: 1,
             duration: 700,
-            timeoutDuration: 3000
+            timeoutDuration: 3000,
+            easing          : "swing",
           },
           prev: '#prev',
           next: '#next',
           pagination: {
             container: '#pager',
             deviation: 1
+          },
+          auto: {
+            play: false,
           }
         });
       });
