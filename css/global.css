@@ -141,14 +141,13 @@ header h1 {
 
 .slider {
   height: 468px;
-  padding-top: 225px;
   position: relative;
 }
 
 #wrapper {
   background-color: #fff;
   width: 100%;
-  margin-top: -225px;
+  margin-top: -234px;
   overflow: hidden;
   position: absolute;
   top: 50%;
@@ -167,7 +166,7 @@ header h1 {
   display: block;
   height: 468px;
   width: 50%;
-  top: 9px;
+  top: 0;
   position: absolute;
   transition: 400ms ease-in-out;
   transition-property: background-color;
